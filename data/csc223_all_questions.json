@@ -54,54 +54,7 @@
         }
       ]
     },
-    {
-      "text": "Determine if the following Logical Expression follows deduction rule.\nP \u2192 q\nP\n= q",
-      "responses": [
-        {
-          "text": "True",
-          "correct": true
-        },
-        {
-          "text": "False"
-        }
-      ]
-    },
-    {
-      "text": "(P \u2192 q) \u2227 (\u00acP \u2192 \u00acq)\n\u00acq\n\u00acp",
-      "responses": [
-        {
-          "text": "True",
-          "correct": true
-        },
-        {
-          "text": "False"
-        }
-      ]
-    },
-    {
-      "text": "p \u2192 q\nq \u2192 r\np \u2192 r",
-      "responses": [
-        {
-          "text": "True",
-          "correct": true
-        },
-        {
-          "text": "False"
-        }
-      ]
-    },
-    {
-      "text": "p \u2228 q\n\u00acp\nq",
-      "responses": [
-        {
-          "text": "True",
-          "correct": true
-        },
-        {
-          "text": "False"
-        }
-      ]
-    },
+   
     {
       "text": "Premise 1: If all students submit their homework, the teacher will give extra credit\nPremise 2: All Students submitted their homework.\nConclusion: The teacher will not give extra credit",
       "responses": [
