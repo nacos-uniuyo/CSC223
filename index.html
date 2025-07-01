@@ -17,16 +17,21 @@
       <div class="container is-fluid">
         <div class="cont box is-marginless is-paddingless">
 
-        
-
           <!-- Quiz Box -->
           <div class="column is-7 questionBox is-paddingless is-marginless">
+            <!-- Timer -->
+            <div v-if="quizStarted && questionIndex < quiz.questions.length" class="has-text-right" style="padding: 10px 20px;">
+              <span class="tag is-warning is-medium">
+                Time Left: {{ formattedTime }}
+              </span>
+            </div>
+
             <transition enter-active-class="animated fadeIn" mode="out-in">
 
               <!-- Landing Screen -->
               <div v-if="!quizStarted" class="startScreen">
                 <h1 class="title">Welcome to CSC223 Practice Quiz</h1>
-                <button class="button is-info is-medium is-rounded" @click="quizStarted = true">Start Quiz</button>
+                <button class="button is-info is-medium is-rounded" @click="startQuiz">Start Quiz</button>
               </div>
 
               <!-- Quiz Question -->

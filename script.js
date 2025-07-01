@@ -13,20 +13,47 @@ fetch("data/csc223_all_questions.json")
         questionIndex: 0,
         userResponses: userResponseSkeleton,
         quizStarted: false,
-        showForm: false,
+        timeLeft: 3720, // 1 hour 2 minutes = 3720 seconds
+        timerInterval: null
       },
       filters: {
         charIndex: function (i) {
           return String.fromCharCode(65 + i); // A, B, C...
         },
       },
+      computed: {
+        formattedTime() {
+          const mins = Math.floor(this.timeLeft / 60);
+          const secs = this.timeLeft % 60;
+          return `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+        }
+      },
       methods: {
+        startQuiz() {
+          this.quizStarted = true;
+          this.startTimer();
+        },
+        startTimer() {
+          this.timerInterval = setInterval(() => {
+            if (this.timeLeft > 0) {
+              this.timeLeft--;
+            } else {
+              clearInterval(this.timerInterval);
+              this.finishQuiz();
+            }
+          }, 1000);
+        },
+        finishQuiz() {
+          this.questionIndex = this.quiz.questions.length;
+        },
         selectOption(index) {
           Vue.set(this.userResponses, this.questionIndex, index);
         },
         next() {
-          if (this.questionIndex < this.quiz.questions.length) {
+          if (this.questionIndex < this.quiz.questions.length - 1) {
             this.questionIndex++;
+          } else {
+            this.finishQuiz();
           }
         },
         prev() {
