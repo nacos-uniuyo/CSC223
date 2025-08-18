@@ -3,15 +3,24 @@ body {
   background-color: #f5f5f5;
 }
 
+.hero.is-fullheight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.startScreen {
+  padding: 40px;
+}
+
 .questionBox {
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.startScreen {
-  text-align: center;
-  padding: 40px;
+.questionContainer {
+  padding: 10px;
 }
 
 .optionContainer {
@@ -32,7 +41,7 @@ body {
   background-color: #f0f0f0;
 }
 
-.is-selected {
+.option.is-selected {
   background-color: #3273dc;
   color: white;
 }
@@ -47,4 +56,9 @@ body {
 
 .quizCompleted {
   padding: 40px;
+}
+
+.button.is-large {
+  font-size: 1.5rem;
+  padding: 20px 40px;
 }
