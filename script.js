@@ -20,7 +20,7 @@ fetch("data/csc223_all_questions.json")
     app = new Vue({
       el: "#app",
       data: {
-        quiz: { questions: shuffledQuestions }, // Use shuffled questions
+        quiz: { questions: shuffledQuestions },
         questions: shuffledQuestions,
         questionIndex: 0,
         userResponses: userResponseSkeleton,
@@ -57,6 +57,7 @@ fetch("data/csc223_all_questions.json")
         },
         finishQuiz() {
           this.questionIndex = this.quiz.questions.length;
+          clearInterval(this.timerInterval); // Ensure timer stops
         },
         selectOption(index) {
           Vue.set(this.userResponses, this.questionIndex, index);
