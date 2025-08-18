@@ -1,15 +1,27 @@
 let app;
 
+// Fisher-Yates shuffle function to randomize array
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]]; // Swap elements
+  }
+  return array;
+}
+
 fetch("data/csc223_all_questions.json")
   .then((res) => res.json())
   .then((quiz) => {
-    const userResponseSkeleton = Array(quiz.questions.length).fill(null);
+    // Shuffle the questions array
+    const shuffledQuestions = shuffleArray([...quiz.questions]);
+    // Initialize userResponses with the same length as shuffled questions
+    const userResponseSkeleton = Array(shuffledQuestions.length).fill(null);
 
     app = new Vue({
       el: "#app",
       data: {
-        quiz,
-        questions: quiz.questions,
+        quiz: { questions: shuffledQuestions }, // Use shuffled questions
+        questions: shuffledQuestions,
         questionIndex: 0,
         userResponses: userResponseSkeleton,
         quizStarted: false,
