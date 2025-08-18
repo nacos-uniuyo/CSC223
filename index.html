@@ -17,27 +17,24 @@
       <div class="container is-fluid">
         <div class="box is-paddingless is-marginless" style="max-width: 800px; margin: auto;">
 
-          <!-- Quiz Box -->
-          <div class="column is-12 questionBox is-paddingless is-marginless">
+          <!-- Start Quiz Button -->
+          <div v-if="!quizStarted" class="startScreen has-text-centered">
+            <button class="button is-info is-large is-rounded" @click="startQuiz" aria-label="Start the quiz">
+              Start Quiz
+            </button>
+          </div>
+
+          <!-- Quiz Question with Timer -->
+          <div v-else-if="quizStarted && questionIndex < quiz.questions.length" class="questionBox is-paddingless is-marginless">
             <!-- Timer -->
-            <div v-if="quizStarted && questionIndex < quiz.questions.length" class="has-text-right" style="padding: 10px 20px;">
+            <div class="has-text-right" style="padding: 10px 20px;">
               <span class="tag is-warning is-medium" aria-label="Time remaining">
                 Time Left: {{ formattedTime }}
               </span>
             </div>
 
             <transition enter-active-class="animate__animated animate__fadeIn" mode="out-in">
-
-              <!-- Landing Screen -->
-              <div v-if="!quizStarted" class="startScreen has-text-centered">
-                <h1 class="title">Welcome to CSC223 Practice Quiz</h1>
-                <button class="button is-info is-medium is-rounded" @click="startQuiz" aria-label="Start the quiz">
-                  Start Quiz
-                </button>
-              </div>
-
-              <!-- Quiz Question -->
-              <div class="questionContainer" v-else-if="questionIndex < quiz.questions.length && quizStarted">
+              <div class="questionContainer">
                 <div class="titleContainer" style="padding: 10px 20px;">
                   <h2 class="title is-5">{{ questionIndex + 1 }}. {{ quiz.questions[questionIndex].text }}</h2>
                 </div>
@@ -59,11 +56,11 @@
                   <nav class="pagination is-centered">
                     <a class="pagination-previous button is-info is-rounded is-outlined"
                       @click="prev" :disabled="questionIndex <= 0" aria-label="Go to previous question">
-                      Previous Question
+                      Previous
                     </a>
                     <a class="pagination-next button is-info is-rounded"
-                      @click="next" :disabled="questionIndex >= quiz.questions.length - 1" aria-label="Go to next question or finish quiz">
-                      {{ userResponses[questionIndex] == null ? 'Skip' : 'Next' }} Question
+                      @click="next" aria-label="Go to next question or finish quiz">
+                      {{ userResponses[questionIndex] == null ? 'Skip' : 'Next' }}
                     </a>
                   </nav>
                   <div class="progressContainer" style="margin-top: 20px;">
@@ -76,17 +73,16 @@
                   </div>
                 </div>
               </div>
-
-              <!-- Completion -->
-              <div v-else-if="questionIndex >= quiz.questions.length && quizStarted" class="quizCompleted has-text-centered">
-                <span class="icon is-large has-text-success">
-                  <i class="fas fa-check-circle fa-3x"></i>
-                </span>
-                <h2 class="title">Congratulations!<br>Wishing You Exam Success</h2>
-                <p class="subtitle">Total score: {{ score() }} / {{ quiz.questions.length }}</p>
-              </div>
-
             </transition>
+          </div>
+
+          <!-- Final Results -->
+          <div v-else-if="quizStarted && questionIndex >= quiz.questions.length" class="quizCompleted has-text-centered">
+            <span class="icon is-large has-text-success">
+              <i class="fas fa-check-circle fa-3x"></i>
+            </span>
+            <h2 class="title">Congratulations!<br>Wishing You Exam Success</h2>
+            <p class="subtitle">Total score: {{ score() }} / {{ quiz.questions.length }}</p>
           </div>
 
         </div>
