@@ -1,6 +1,907 @@
 {
   "questions": [
     {
+      "text": "Which of the following is NOT a proposition?",
+      "responses": [
+        {
+          "text": "2 + 2 = 4."
+        },
+        {
+          "text": "The moon is made of green cheese."
+        },
+        {
+          "text": "What is your name?",
+          "correct": true
+        },
+        {
+          "text": "It is raining outside."
+        }
+      ]
+    },
+    {
+      "text": "Let p: \"I study hard\" and q: \"I will pass the exam\". What is the symbolic form of \"I will pass the exam only if I study hard\"?",
+      "responses": [
+        {
+          "text": "p → q"
+        },
+        {
+          "text": "q → p",
+          "correct": true
+        },
+        {
+          "text": "p ∧ q"
+        },
+        {
+          "text": "¬p ∨ q"
+        }
+      ]
+    },
+    {
+      "text": "What is the negation of the statement \"Today is Monday and it is not raining\"?",
+      "responses": [
+        {
+          "text": "Today is not Monday and it is raining."
+        },
+        {
+          "text": "Today is not Monday or it is raining.",
+          "correct": true
+        },
+        {
+          "text": "If today is Monday, then it is raining."
+        },
+        {
+          "text": "Today is Monday or it is raining."
+        }
+      ]
+    },
+    {
+      "text": "Find the bitwise XOR of 11001010 and 01101100.",
+      "responses": [
+        {
+          "text": "10100110",
+          "correct": true
+        },
+        {
+          "text": "01001000"
+        },
+        {
+          "text": "11101110"
+        },
+        {
+          "text": "10100111"
+        }
+      ]
+    },
+    {
+      "text": "Using a truth table, the proposition (p → q) ↔ (¬p ∨ q) is a:",
+      "responses": [
+        {
+          "text": "Tautology",
+          "correct": true
+        },
+        {
+          "text": "Contradiction"
+        },
+        {
+          "text": "Contingency"
+        },
+        {
+          "text": "Fallacy"
+        }
+      ]
+    },
+    {
+      "text": "Let A = {a, b, c}. Which of the following is NOT a subset of A?",
+      "responses": [
+        {
+          "text": "∅"
+        },
+        {
+          "text": "{a, c}"
+        },
+        {
+          "text": "{a, b, c}"
+        },
+        {
+          "text": "{a, d}",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "text": "Let P(x) be \"x is a prime number\". What is the truth value of P(9)?",
+      "responses": [
+        {
+          "text": "True"
+        },
+        {
+          "text": "False",
+          "correct": true
+        },
+        {
+          "text": "Neither True nor False"
+        },
+        {
+          "text": "Undefined"
+        }
+      ]
+    },
+    {
+      "text": "Which function is NOT one-to-one from the set of integers to the set of integers?",
+      "responses": [
+        {
+          "text": "f(x) = x + 1"
+        },
+        {
+          "text": "f(x) = 2x"
+        },
+        {
+          "text": "f(x) = x³"
+        },
+        {
+          "text": "f(x) = x²",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "text": "Evaluate the expression: ⌈3.1⌉ - ⌊-1.5⌋.",
+      "responses": [
+        {
+          "text": "5"
+        },
+        {
+          "text": "6",
+          "correct": true
+        },
+        {
+          "text": "4"
+        },
+        {
+          "text": "2"
+        }
+      ]
+    },
+    {
+      "text": "What is the inverse of the statement \"If it snows, then school is closed\"?",
+      "responses": [
+        {
+          "text": "If school is closed, then it is snowing."
+        },
+        {
+          "text": "If it does not snow, then school is not closed.",
+          "correct": true
+        },
+        {
+          "text": "If school is not closed, then it is not snowing."
+        },
+        {
+          "text": "It snows and school is not closed."
+        }
+      ]
+    },
+    {
+      "text": "Evaluate the bitwise expression: (1011 OR 0101) AND 1100.",
+      "responses": [
+        {
+          "text": "1100",
+          "correct": true
+        },
+        {
+          "text": "1000"
+        },
+        {
+          "text": "1111"
+        },
+        {
+          "text": "0100"
+        }
+      ]
+    },
+    {
+      "text": "Translate the statement ∃x∀y L(x, y), where L(x, y) is \"x loves y\" and the domain is all people.",
+      "responses": [
+        {
+          "text": "Everybody loves somebody."
+        },
+        {
+          "text": "Somebody loves everybody.",
+          "correct": true
+        },
+        {
+          "text": "Everybody loves everybody."
+        },
+        {
+          "text": "Somebody loves themself."
+        }
+      ]
+    },
+    {
+      "text": "If A = {1, 2} and B = {a, b}, what is the Cartesian product A × B?",
+      "responses": [
+        {
+          "text": "{(1, a), (2, b)}"
+        },
+        {
+          "text": "{1a, 2b}"
+        },
+        {
+          "text": "{(1, a), (1, b), (2, a), (2, b)}",
+          "correct": true
+        },
+        {
+          "text": "{(a, 1), (b, 2)}"
+        }
+      ]
+    },
+    {
+      "text": "Let the universal set be U = {1, 2, ..., 10}. If A = {2, 3, 5, 7}, what is the bit string representation of A?",
+      "responses": [
+        {
+          "text": "0110101000",
+          "correct": true
+        },
+        {
+          "text": "1001010111"
+        },
+        {
+          "text": "0110101001"
+        },
+        {
+          "text": "1110101000"
+        }
+      ]
+    },
+    {
+      "text": "If f(a) = 1, f(b) = 2, f(c) = 1, which statement is true for the function f?",
+      "responses": [
+        {
+          "text": "It is one-to-one and onto."
+        },
+        {
+          "text": "It is not one-to-one but may be onto.",
+          "correct": true
+        },
+        {
+          "text": "It is one-to-one but not onto."
+        },
+        {
+          "text": "It is neither one-to-one nor onto."
+        }
+      ]
+    },
+    {
+      "text": "What is the cardinality of the power set of S = {0, 1, 2}?",
+      "responses": [
+        {
+          "text": "3"
+        },
+        {
+          "text": "6"
+        },
+        {
+          "text": "8",
+          "correct": true
+        },
+        {
+          "text": "9"
+        }
+      ]
+    },
+    {
+      "text": "What is the negation of ∀x (x² > 0)? The domain is all real numbers.",
+      "responses": [
+        {
+          "text": "∃x (x² ≤ 0)",
+          "correct": true
+        },
+        {
+          "text": "∀x (x² ≤ 0)"
+        },
+        {
+          "text": "∃x (x² < 0)"
+        },
+        {
+          "text": "∀x (x² < 0)"
+        }
+      ]
+    },
+    {
+      "text": "What is the value of ⌊1/2 + ⌈3/2⌉⌋?",
+      "responses": [
+        {
+          "text": "1"
+        },
+        {
+          "text": "2",
+          "correct": true
+        },
+        {
+          "text": "3"
+        },
+        {
+          "text": "0"
+        }
+      ]
+    },
+    {
+      "text": "Let A = {x | x is an even integer} and B = {x | x is a multiple of 4}. Which statement is true?",
+      "responses": [
+        {
+          "text": "A = B"
+        },
+        {
+          "text": "A ⊂ B"
+        },
+        {
+          "text": "B ⊂ A",
+          "correct": true
+        },
+        {
+          "text": "A ∩ B = ∅"
+        }
+      ]
+    },
+    {
+      "text": "The statement p ⊕ q (exclusive OR) is logically equivalent to:",
+      "responses": [
+        {
+          "text": "(p ∧ q) ∨ (¬p ∧ ¬q)"
+        },
+        {
+          "text": "(p ∨ q) ∧ ¬(p ∧ q)",
+          "correct": true
+        },
+        {
+          "text": "p → q"
+        },
+        {
+          "text": "¬p ∧ ¬q"
+        }
+      ]
+    },
+    {
+      "text": "What does the notation ∃!x P(x) mean?",
+      "responses": [
+        {
+          "text": "There exists at least two x for which P(x) is true."
+        },
+        {
+          "text": "P(x) is true for all x."
+        },
+        {
+          "text": "There is no x for which P(x) is true."
+        },
+        {
+          "text": "There exists a unique x for which P(x) is true.",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "text": "Let A={1,3,5} and B={2,3,4}. What is the symmetric difference A Δ B?",
+      "responses": [
+        {
+          "text": "{3}"
+        },
+        {
+          "text": "{1, 2, 4, 5}",
+          "correct": true
+        },
+        {
+          "text": "{1, 5}"
+        },
+        {
+          "text": "{1, 2, 3, 4, 5}"
+        }
+      ]
+    },
+    {
+      "text": "If f(x) = x + 1 and g(x) = 2x, what is the composition (g ◦ f)(x)?",
+      "responses": [
+        {
+          "text": "2x + 1"
+        },
+        {
+          "text": "2(x + 1)",
+          "correct": true
+        },
+        {
+          "text": "2x² + 1"
+        },
+        {
+          "text": "(x + 1) + 2x"
+        }
+      ]
+    },
+    {
+      "text": "The statement \"For the system to be secure, it is sufficient that the password is changed every month.\" is equivalent to:",
+      "responses": [
+        {
+          "text": "If the password is changed every month, the system is secure.",
+          "correct": true
+        },
+        {
+          "text": "If the system is secure, the password was changed every month."
+        },
+        {
+          "text": "The password is changed every month if and only if the system is secure."
+        },
+        {
+          "text": "The system is not secure or the password is changed every month."
+        }
+      ]
+    },
+    {
+      "text": "Let C(x) be \"x is a cat\" and F(x) be \"x is fluffy\". How do you write \"No cats are not fluffy\"?",
+      "responses": [
+        {
+          "text": "¬∃x(C(x) ∧ ¬F(x))",
+          "correct": true
+        },
+        {
+          "text": "∃x(C(x) ∧ ¬F(x))"
+        },
+        {
+          "text": "∀x(C(x) ∧ F(x))"
+        },
+        {
+          "text": "¬∀x(C(x) → ¬F(x))"
+        }
+      ]
+    },
+    {
+      "text": "Which set is described by {x ∈ ℤ | x² = 9}?",
+      "responses_PD0
+      "responses": [
+        {
+          "text": "{3}"
+        },
+        {
+          "text": "{-3}"
+        },
+        {
+          "text": "{3, -3}",
+          "correct": true
+        },
+        {
+          "text": "{81}"
+        }
+      ]
+    },
+    {
+      "text": "What is the relation between the sets A={1,2} and B={{1},{2},{1,2},∅}?",
+      "responses": [
+        {
+          "text": "A ∈ B"
+        },
+        {
+          "text": "A ⊆ B"
+        },
+        {
+          "text": "B is the power set of A",
+          "correct": true
+        },
+        {
+          "text": "A and B are disjoint"
+        }
+      ]
+    },
+    {
+      "text": "If f(n) = √(n² + 5) is a function from ℕ to ℝ, is it a valid function?",
+      "responses": [
+        {
+          "text": "No, because n² + 5 can be negative."
+        },
+        {
+          "text": "Yes, because n² + 5 is always positive for any n ∈ ℕ.",
+          "correct": true
+        },
+        {
+          "text": "No, because it can produce two outputs."
+        },
+        {
+          "text": "Yes, but only for n > 0."
+        }
+      ]
+    },
+    {
+      "text": "Let p be True, q be False, and r be True. What is the truth value of (p ∧ ¬q) → r?",
+      "responses": [
+        {
+          "text": "True",
+          "correct": true
+        },
+        {
+          "text": "False"
+        },
+        {
+          "text": "Undefined"
+        },
+        {
+          "text": "Both True and False"
+        }
+      ]
+    },
+    {
+      "text": "Which law is represented by the equivalence P ∧ (Q ∨ R) ≡ (P ∧ Q) ∨ (P ∧ R)?",
+      "responses": [
+        {
+          "text": "Associative Law"
+        },
+        {
+          "text": "Commutative Law"
+        },
+        {
+          "text": "De Morgan's Law"
+        },
+        {
+          "text": "Distributive Law",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "text": "How many elements are in the set {∅, {∅}, a, {a}}?",
+      "responses": [
+        {
+          "text": "1"
+        },
+        {
+          "text": "2"
+        },
+        {
+          "text": "3"
+        },
+        {
+          "text": "4",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "text": "The range of the function f(x) = ⌈x⌉ for the domain of all real numbers is:",
+      "responses": [
+        {
+          "text": "The set of real numbers (ℝ)"
+        },
+        {
+          "text": "The set of integers (ℤ)",
+          "correct": true
+        },
+        {
+          "text": "The set of natural numbers (ℕ)"
+        },
+        {
+          "text": "The set of rational numbers (ℚ)"
+        }
+      ]
+    },
+    {
+      "text": "Let A = {1, 2, 3, 4, 5} and B = {4, 5, 6, 7}. What is A \\ B (A minus B)?",
+      "responses": [
+        {
+          "text": "{1, 2, 3}",
+          "correct": true
+        },
+        {
+          "text": "{6, 7}"
+        },
+        {
+          "text": "{4, 5}"
+        },
+        {
+          "text": "{1, 2, 3, 6, 7}"
+        }
+      ]
+    },
+    {
+      "text": "Let P(x, y) be \"x is taller than y\". Which statement says \"There is someone who is taller than everyone\"?",
+      "responses": [
+        {
+          "text": "∀x ∃y P(x, y)"
+        },
+        {
+          "text": "∃x ∀y P(x, y)",
+          "correct": true
+        },
+        {
+          "text": "∀y ∃x P(x, y)"
+        },
+        {
+          "text": "∃y ∀x P(x, y)"
+        }
+      ]
+    },
+    {
+      "text": "If A ∪ B = A ∩ B, then what must be true?",
+      "responses": [
+        {
+          "text": "A = ∅"
+        },
+        {
+          "text": "B = ∅"
+        },
+        {
+          "text": "A = B",
+          "correct": true
+        },
+        {
+          "text": "A is a proper subset of B"
+        }
+      ]
+    },
+    {
+      "text": "A function that is both one-to-one and onto is called:",
+      "responses": [
+        {
+          "text": "A surjection"
+        },
+        {
+          "text": "An injection"
+        },
+        {
+          "text": "A bijection",
+          "correct": true
+        },
+        {
+          "text": "A projection"
+        }
+      ]
+    },
+    {
+      "text": "What is the contrapositive of \"If x is a prime number, then x is odd or x=2\"?",
+      "responses": [
+        {
+          "text": "If x is not odd and x≠2, then x is not a prime number.",
+          "correct": true
+        },
+        {
+          "text": "If x is odd or x=2, then x is a prime number."
+        },
+        {
+          "text": "If x is not a prime number, then x is not odd and x≠2."
+        },
+        {
+          "text": "If x is not odd or x≠2, then x is not a prime number."
+        }
+      ]
+    },
+    {
+      "text": "The bitwise expression for A ∩ B is found using which operation on their bit strings?",
+      "responses": [
+        {
+          "text": "OR"
+        },
+        {
+          "text": "AND",
+          "correct": true
+        },
+        {
+          "text": "XOR"
+        },
+        {
+          "text": "NOT"
+        }
+      ]
+    },
+    {
+      "text": "Let f(x) = 3x - 2. Find the inverse function f⁻¹(x)?",
+      "responses": [
+        {
+          "text": "2x - 3"
+        },
+        {
+          "text": "(x + 2)/3",
+          "correct": true
+        },
+        {
+          "text": "1/(3x - 2)"
+        },
+        {
+          "text": "-3x + 2"
+        }
+      ]
+    },
+    {
+      "text": "The empty set ∅ is a subset of:",
+      "responses": [
+        {
+          "text": "Only itself"
+        },
+        {
+          "text": "No sets"
+        },
+        {
+          "text": "Every set",
+          "correct": true
+        },
+        {
+          "text": "Only non-empty sets"
+        }
+      ]
+    },
+    {
+      "text": "Which statement is equivalent to ¬(p → q)?",
+      "responses": [
+        {
+          "text": "p ∧ ¬q",
+          "correct": true
+        },
+        {
+          "text": "¬p ∨ q"
+        },
+        {
+          "text": "q → p"
+        },
+        {
+          "text": "¬p → ¬q"
+        }
+      ]
+    },
+    {
+      "text": "Let A = {a, b}. Which of the following is an element of P(A)?",
+      "responses": [
+        {
+          "text": "a"
+        },
+        {
+          "text": "{a}",
+          "correct": true
+        },
+        {
+          "text": "{a, c}"
+        },
+        {
+          "text": "{{a}}"
+        }
+      ]
+    },
+    {
+      "text": "The expression for \"The sum of two positive integers is always positive\" can be written as:",
+      "responses": [
+        {
+          "text": "∀x ∃y (x + y > 0)"
+        },
+        {
+          "text": "∀x ∀y ((x>0) ∧ (y>0) → (x+y>0))",
+          "correct": true
+        },
+        {
+          "text": "∃x ∃y (x + y > 0)"
+        },
+        {
+          "text": "∀x ∀y (x + y ≤ 0)"
+        }
+      ]
+    },
+    {
+      "text": "What is the result of ⌊⌈-2.5⌉ + 1.1⌋?",
+      "responses": [
+        {
+          "text": "-1",
+          "correct": true
+        },
+        {
+          "text": "-2"
+        },
+        {
+          "text": "0"
+        },
+        {
+          "text": "1"
+        }
+      ]
+    },
+    {
+      "text": "If the universal set U = {a, b, c, d, e} and set A is represented by the bit string 10101, what is set A?",
+      "responses": [
+        {
+          "text": "{b, d}"
+        },
+        {
+          "text": "{a, c, e}",
+          "correct": true
+        },
+        {
+          "text": "{a, b, c}"
+        },
+        {
+          "text": "{c, d, e}"
+        }
+      ]
+    },
+    {
+      "text": "Which of the following describes a relation that is NOT a function from A={1,2,3} to B={4,5,6}?",
+      "responses": [
+        {
+          "text": "{(1, 4), (2, 5), (3, 6)}"
+        },
+        {
+          "text": "{(1, 5), (2, 5), (3, 5)}"
+        },
+        {
+          "text": "{(1, 4), (2, 6)}"
+        },
+        {
+          "text": "{(1, 4), (1, 5), (2, 6), (3, 6)}",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "text": "If set A has 4 elements and set B has 3 elements, what is the maximum possible number of elements in A ∪ B?",
+      "responses": [
+        {
+          "text": "3"
+        },
+        {
+          "text": "4"
+        },
+        {
+          "text": "7",
+          "correct": true
+        },
+        {
+          "text": "12"
+        }
+      ]
+    },
+    {
+      "text": "The logical operator for \"if and only if\" is called:",
+      "responses": [
+        {
+          "text": "Conjunction"
+        },
+        {
+          "text": "Disjunction"
+        },
+        {
+          "text": "Conditional"
+        },
+        {
+          "text": "Biconditional",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "text": "Let A be the set of all students who live within one mile of school and let B be the set of all students who walk to classes. Describe a student in A ∩ B.",
+      "responses": [
+        {
+          "text": "A student who lives within one mile of school and walks to classes.",
+          "correct": true
+        },
+        {
+          "text": "A student who lives within one mile of school or walks to classes."
+        },
+        {
+          "text": "A student who lives within one mile of school but does not walk to classes."
+        },
+        {
+          "text": "A student who does not live within one mile of school but walks to classes."
+        }
+      ]
+    },
+    {
+      "text": "Let f(n) = n - 1 and g(n) = n². Find (f ◦ g)(3).",
+      "responses": [
+        {
+          "text": "8",
+          "correct": true
+        },
+        {
+          "text": "4"
+        },
+        {
+          "text": "6"
+        },
+        {
+          "text": "9"
+        }
+      ]
+    },
+    {
       "text": "A statement which is said to be either true or false is called a...",
       "responses": [
         {
@@ -19,7 +920,7 @@
       ]
     },
     {
-      "text": "Statement A: you can enter the club only if you have a membership card\nStatement B: if you do not have a membership card, then you cannot enter the club\u2026",
+      "text": "Statement A: you can enter the club only if you have a membership card\nStatement B: if you do not have a membership card, then you cannot enter the club…",
       "responses": [
         {
           "text": "Logical Equivalent",
@@ -43,7 +944,7 @@
       ]
     },
     {
-      "text": "Statement A: If you eat vegetable, you will be healthy\nStatement B:if you are healthy, then you eat Vegetables.",
+      "text": "Statement A: If you eat vegetable, you will be healthy\nStatement B: if you are healthy, then you eat Vegetables.",
       "responses": [
         {
           "text": "Logical equivalent"
@@ -54,7 +955,6 @@
         }
       ]
     },
-   
     {
       "text": "Premise 1: If all students submit their homework, the teacher will give extra credit\nPremise 2: All Students submitted their homework.\nConclusion: The teacher will not give extra credit",
       "responses": [
@@ -98,7 +998,7 @@
       ]
     },
     {
-      "text": "E(x) = \u221a(3(x\u00b2 - 4x)) / (3x\u00b2 - 4x + 2 + 1)\nE(1) =  (2i + 5)",
+      "text": "E(x) = √(3(x² - 4x)) / (3x² - 4x + 2 + 1)\nE(1) = (2i + 5)",
       "responses": [
         {
           "text": "True"
@@ -110,7 +1010,7 @@
       ]
     },
     {
-      "text": "((P \u2192 q) \u2227 (q \u2192 r)) \u2192 (p \u2192 r)\nIs this statement a tautology?",
+      "text": "((P → q) ∧ (q → r)) → (p → r)\nIs this statement a tautology?",
       "responses": [
         {
           "text": "True",
@@ -122,7 +1022,7 @@
       ]
     },
     {
-      "text": "(P \u2228 (q \u2227 r)) \u2192 ((p \u2228 q) \u2227 (p \u2228 r))",
+      "text": "(P ∨ (q ∧ r)) → ((p ∨ q) ∧ (p ∨ r))",
       "responses": [
         {
           "text": "True",
@@ -134,7 +1034,7 @@
       ]
     },
     {
-      "text": "((p \u2192 q) \u2228 (q \u2192 p)) \u2192 (\u00acp \u2228 q)\nIs this statement a tautology?",
+      "text": "((p → q) ∨ (q → p)) → (¬p ∨ q)\nIs this statement a tautology?",
       "responses": [
         {
           "text": "True",
@@ -146,7 +1046,7 @@
       ]
     },
     {
-      "text": "(p \u2228 q) \u2227 \u00acr\nIs the statement above logically Contingent?",
+      "text": "(p ∨ q) ∧ ¬r\nIs the statement above logically Contingent?",
       "responses": [
         {
           "text": "True",
@@ -158,7 +1058,7 @@
       ]
     },
     {
-      "text": "(p \u2192 q) \u2227 (q \u2192 r)\nIs this statement Logically Contingent?",
+      "text": "(p → q) ∧ (q → r)\nIs this statement Logically Contingent?",
       "responses": [
         {
           "text": "True",
@@ -170,7 +1070,7 @@
       ]
     },
     {
-      "text": "\u00ac(p \u2227 q) \u2228 r\nIs this statement Logically Contingent?",
+      "text": "¬(p ∧ q) ∨ r\nIs this statement Logically Contingent?",
       "responses": [
         {
           "text": "True",
@@ -182,7 +1082,7 @@
       ]
     },
     {
-      "text": "(p \u2228 q) \u2227 (\u00acp \u2227 \u00acq)\nDoes this statement above show Logical Contradiction?",
+      "text": "(p ∨ q) ∧ (¬p ∧ ¬q)\nDoes this statement above show Logical Contradiction?",
       "responses": [
         {
           "text": "True",
@@ -194,7 +1094,7 @@
       ]
     },
     {
-      "text": "(p \u2194 q) \u2227 (p \u2227 \u00acq)\nDoes this statement above show Logical Contradiction?",
+      "text": "(p ↔ q) ∧ (p ∧ ¬q)\nDoes this statement above show Logical Contradiction?",
       "responses": [
         {
           "text": "True",
@@ -206,13 +1106,13 @@
       ]
     },
     {
-      "text": "If S = { x \u2208 N / x + 2 = 1 } then S equals",
+      "text": "If S = { x ∈ N / x + 2 = 1 } then S equals",
       "responses": [
         {
           "text": "{1,2,3,4}"
         },
         {
-          "text": "\u2205",
+          "text": "∅",
           "correct": true
         },
         {
@@ -260,7 +1160,7 @@
       ]
     },
     {
-      "text": "If p = {1,2} and Q = {8,9} find PxQ",
+      "text": "If P = {1,2} and Q = {8,9} find PxQ",
       "responses": [
         {
           "text": "{(1,8), (1,2), (2,9), (2,8)}"
@@ -278,7 +1178,7 @@
       ]
     },
     {
-      "text": "Given U = {1,2,...,30}, M = (Multiples of 3), E = (Even numbers). What is n(M \u2229 E)?",
+      "text": "Given U = {1,2,...,30}, M = (Multiples of 3), E = (Even numbers). What is n(M ∩ E)?",
       "responses": [
         {
           "text": "5",
@@ -299,16 +1199,16 @@
       "text": "All healthy pigs are greedy",
       "responses": [
         {
-          "text": "H \u2229 G"
+          "text": "H ∩ G"
         },
         {
-          "text": "H \u222a G"
+          "text": "H ∪ G"
         },
         {
-          "text": "G \u2282 H"
+          "text": "G ⊂ H"
         },
         {
-          "text": "H \u2282 G",
+          "text": "H ⊂ G",
           "correct": true
         }
       ]
@@ -317,22 +1217,22 @@
       "text": "All healthy pigs are greedy and Fat",
       "responses": [
         {
-          "text": "H \u222a G \u222a F"
+          "text": "H ∪ G ∪ F"
         },
         {
-          "text": "H \u2229 G \u222a F'",
+          "text": "H ∩ G ∪ F'",
           "correct": true
         },
         {
-          "text": "H \u2282 G \u2229 F"
+          "text": "H ⊂ G ∩ F"
         },
         {
-          "text": "H \u222a G \u2229 F'"
+          "text": "H ∪ G ∩ F'"
         }
       ]
     },
     {
-      "text": "A = {x | x is a set of all Vowel Letters}\nB = {x | x is a set of all consonant Alphabet}\nFind the Cardinality of A \u222a B",
+      "text": "A = {x | x is a set of all Vowel Letters}\nB = {x | x is a set of all consonant Alphabet}\nFind the Cardinality of A ∪ B",
       "responses": [
         {
           "text": "20"
@@ -350,7 +1250,7 @@
       ]
     },
     {
-      "text": "If the nth term of a sequence is a\u2099 = 2n\u00b2 + 3, what is the 5th term?",
+      "text": "If the nth term of a sequence is aₙ = 2n² + 3, what is the 5th term?",
       "responses": [
         {
           "text": "13"
@@ -440,7 +1340,7 @@
       ]
     },
     {
-      "text": "In a Science Class, 18 students read physics, 25 read Mathematics, 23 read Chemistry, and 6 read physics and chemistry. If there are 50 students altogether and 5 did not read any of the three subjects, find n(P \u2229 M \u2229 C)",
+      "text": "In a Science Class, 18 students read physics, 25 read Mathematics, 23 read Chemistry, and 6 read physics and chemistry. If there are 50 students altogether and 5 did not read any of the three subjects, find n(P ∩ M ∩ C)",
       "responses": [
         {
           "text": "42"
