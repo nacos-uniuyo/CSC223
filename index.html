@@ -5,64 +5,73 @@
   <title>CSC 223 - Fun Practice</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="vb.webp">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.0/css/bulma.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <section id="app" class="hero is-fullheight">
     <div class="hero-body">
       <div class="container is-fluid">
-        <div class="cont box is-marginless is-paddingless">
+        <div class="box is-paddingless is-marginless" style="max-width: 800px; margin: auto;">
 
           <!-- Quiz Box -->
-          <div class="column is-7 questionBox is-paddingless is-marginless">
+          <div class="column is-12 questionBox is-paddingless is-marginless">
             <!-- Timer -->
             <div v-if="quizStarted && questionIndex < quiz.questions.length" class="has-text-right" style="padding: 10px 20px;">
-              <span class="tag is-warning is-medium">
+              <span class="tag is-warning is-medium" aria-label="Time remaining">
                 Time Left: {{ formattedTime }}
               </span>
             </div>
 
-            <transition enter-active-class="animated fadeIn" mode="out-in">
+            <transition enter-active-class="animate__animated animate__fadeIn" mode="out-in">
 
               <!-- Landing Screen -->
-              <div v-if="!quizStarted" class="startScreen">
+              <div v-if="!quizStarted" class="startScreen has-text-centered">
                 <h1 class="title">Welcome to CSC223 Practice Quiz</h1>
-                <button class="button is-info is-medium is-rounded" @click="startQuiz">Start Quiz</button>
+                <button class="button is-info is-medium is-rounded" @click="startQuiz" aria-label="Start the quiz">
+                  Start Quiz
+                </button>
               </div>
 
               <!-- Quiz Question -->
               <div class="questionContainer" v-else-if="questionIndex < quiz.questions.length && quizStarted">
-                <div class="titleContainer">
+                <div class="titleContainer" style="padding: 10px 20px;">
                   <h2 class="title is-5">{{ questionIndex + 1 }}. {{ quiz.questions[questionIndex].text }}</h2>
                 </div>
 
-                <div class="optionContainer">
+                <div class="optionContainer" style="padding: 0 20px;">
                   <div class="option" v-for="(response, index) in quiz.questions[questionIndex].responses"
                     @click="selectOption(index)"
                     :class="{ 'is-selected': userResponses[questionIndex] === index }"
-                    :key="index">
+                    :key="index"
+                    role="button"
+                    tabindex="0"
+                    @keydown.enter="selectOption(index)"
+                    :aria-label="`Option ${index | charIndex}: ${response.text}`">
                     {{ index | charIndex }}. {{ response.text }}
                   </div>
                 </div>
 
-                <div class="questionFooter">
+                <div class="questionFooter" style="padding: 20px;">
                   <nav class="pagination is-centered">
                     <a class="pagination-previous button is-info is-rounded is-outlined"
-                      @click="prev" :disabled="questionIndex < 1">Previous Question</a>
+                      @click="prev" :disabled="questionIndex <= 0" aria-label="Go to previous question">
+                      Previous Question
+                    </a>
                     <a class="pagination-next button is-info is-rounded"
-                      @click="next" :disabled="questionIndex >= quiz.questions.length">
+                      @click="next" :disabled="questionIndex >= quiz.questions.length - 1" aria-label="Go to next question or finish quiz">
                       {{ userResponses[questionIndex] == null ? 'Skip' : 'Next' }} Question
                     </a>
                   </nav>
-                  <div class="progressContainer">
+                  <div class="progressContainer" style="margin-top: 20px;">
                     <progress class="progress is-success is-small"
-                      :value="(questionIndex / quiz.questions.length) * 100"
-                      max="100">
-                      {{ (questionIndex / quiz.questions.length) * 100 }}%
+                      :value="((questionIndex + 1) / quiz.questions.length) * 100"
+                      max="100"
+                      aria-label="Quiz progress">
+                      {{ ((questionIndex + 1) / quiz.questions.length) * 100 }}%
                     </progress>
                   </div>
                 </div>
@@ -71,9 +80,9 @@
               <!-- Completion -->
               <div v-else-if="questionIndex >= quiz.questions.length && quizStarted" class="quizCompleted has-text-centered">
                 <span class="icon is-large has-text-success">
-                  <i class="fa fa-check-circle-o fa-3x"></i>
+                  <i class="fas fa-check-circle fa-3x"></i>
                 </span>
-                <h2 class="title">Congratulations!<br>Wishing You Exams Success</h2>
+                <h2 class="title">Congratulations!<br>Wishing You Exam Success</h2>
                 <p class="subtitle">Total score: {{ score() }} / {{ quiz.questions.length }}</p>
               </div>
 
@@ -85,7 +94,7 @@
     </div>
   </section>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.7.16/vue.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
